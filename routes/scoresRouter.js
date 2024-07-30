@@ -5,6 +5,6 @@ const scoresRouter = express.Router();
 const { addScore, getRecords } = scoresControllers;
 
 scoresRouter.post("/score", addScore);
-scoresRouter.post("/records", getRecords);
+scoresRouter.get("/records", getRecords);
 
 export default scoresRouter;
