@@ -1,4 +1,5 @@
 import pool from "../db.js";
+import ctrlWrapper from "../decorators/ctrlWrapper.js";
 // import { setScore } from "../services/scoresServices.js";
 
 const addScore = async (req, res) => {
@@ -18,4 +19,7 @@ const getRecords = async (req, res) => {
   res.json(records.rows);
 };
 
-export default { addScore, getRecords };
+export default {
+  addScore: ctrlWrapper(addScore),
+  getRecords: ctrlWrapper(getRecords),
+};
