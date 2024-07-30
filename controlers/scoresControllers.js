@@ -1,7 +1,10 @@
+import { setScore } from "../services/scoresServices.js";
+
 const addScore = async (req, res) => {
   const { name, points } = req.body;
-  console.log(name, points);
-  res.json("ok");
+  const newScore = setScore({ name, points });
+  console.log(newScore);
+  return res.json(newScore);
 };
 
 const getRecords = async (req, res) => {};
