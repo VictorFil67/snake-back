@@ -14,7 +14,7 @@ const addScore = async (req, res) => {
 
 const getRecords = async (req, res) => {
   const records = await pool.query(
-    `SELECT name, points FROM scores ORDER BY points DESC LIMIT 5`
+    `SELECT name, points, id FROM scores ORDER BY points DESC LIMIT 5`
   );
   res.json(records.rows);
 };

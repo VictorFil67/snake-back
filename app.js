@@ -1,6 +1,7 @@
 import express from "express";
 import scoresRouter from "./routes/scoresRouter.js";
 import cors from "cors";
+import "dotenv/config";
 
 const { PORT = 3000 } = process.env;
 
