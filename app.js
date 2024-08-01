@@ -3,7 +3,7 @@ import scoresRouter from "./routes/scoresRouter.js";
 import cors from "cors";
 import "dotenv/config";
 
-const { PORT = 3000 } = process.env;
+const { PORT = 5000 } = process.env;
 
 const app = express();
 app.use(express.json());

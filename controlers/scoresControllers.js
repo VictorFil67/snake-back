@@ -1,6 +1,5 @@
 import pool from "../db.js";
 import ctrlWrapper from "../decorators/ctrlWrapper.js";
-// import { setScore } from "../services/scoresServices.js";
 
 const addScore = async (req, res) => {
   const { name, points } = req.body;
